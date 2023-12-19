@@ -140,7 +140,9 @@ ii=anmy;
 if(lr==1){ngt=1;}
 if(lr==-1){ngt=-1;}
 if(ngt<0){ii+= 3;}
+}
 
+mr=function(){
 ctx.drawImage(bg,0,0,width,height);
 
 x1=i*v,y1=ii*vv,x2=v,y2=vv, x=x,y=y, w=.3*.5,h=.3
@@ -171,7 +173,8 @@ vxx+=(x-xx)*-.25//xx+((xx-x)*-.001)
 vyy+=Math.random()*.025
 //Math.sqrt((x-xx)*2,(y-yy)*2)*-1;
 }
-
+}
+mmr=function(){
 c(xx,yy+(.05));
 }
 
@@ -183,6 +186,7 @@ gamespeed=1;
 function animate() {
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 for(var i=0;i<gamespeed;i++){m();mm();}
+mr();mmr();
 requestAnimationFrame(animate);
 }
 
